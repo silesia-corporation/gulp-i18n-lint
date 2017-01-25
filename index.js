@@ -4,9 +4,11 @@ var through2 = require("through2"),
     i18nLint = require("./lib/i18n-lint"),
     i18nLintReporter = require("./lib/reporters/default"),
     i18nLintPlugin = function (options) {
+        options = options || {};
+
         return through2.obj(function (file, enc, cb) {
             var errors = i18nLint.scan(file.contents.toString(),
-                options.linter.rules
+                options.rules
             );
 
             // send status down-stream
