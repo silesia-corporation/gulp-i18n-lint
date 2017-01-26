@@ -4,7 +4,6 @@
   "devDependencies": {
     "ava": "^0.17.0",
     "nyc": "^10.1.2",
-    "tap-nyan": "^1.1.0",
     "vinyl": "^2.0.1"
   },
   "dependencies": {
@@ -15,7 +14,6 @@
   },
   "scripts": {
     "test": "ava \"test/**/*.js\"",
-    "coverage": "nyc ava --tap | tap-nyan",
-    "report": "nyc report --reporter=html"
+    "coverage": "nyc ava"
   }
 }
